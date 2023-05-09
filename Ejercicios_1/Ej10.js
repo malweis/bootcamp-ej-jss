@@ -2,6 +2,7 @@ let dia;
 
 do {
   dia = prompt("Introduce un día de la semana (o escribe 'salir' para terminar)");
+  
 
   switch (dia) {
     case "lunes":
