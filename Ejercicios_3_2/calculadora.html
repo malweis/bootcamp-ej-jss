@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Ingrese los 2 numeros para hacer la operacion</p>
+    <input type="text" id="nro1"/>  <input type="text" id="nro2"/>
+    
+    <button type="button" id="suma" >+</button>
+    <button type="button" id="resta" >-</button>
+    <button type="button" id="multiplicacion" >*</button>
+    <button type="button" id="division" >/</button>
+
+    <input id="resultado" style="background-color: cyan;"/>
+
+<script>
+    let nror1 = 0;
+    let nror2 = 0;
+    let nro1 = document.getElementById("nro1");
+    let nro2 = document.getElementById("nro2");
+
+    nro1.addEventListener("change", (event) => {
+        nror1 = Number(document.getElementById("nro1").value);
+        console.log(nror1);
+    });
+
+    nro2.addEventListener("change", (event) => {
+        nror2 = Number(document.getElementById("nro2").value);
+        console.log(nror2);
+    });
+    
+    document.getElementById("suma").onclick = function(){
+        document.getElementById("resultado").value = nror1 + nror2;
+    };
+    document.getElementById("resta").onclick = function(){
+        document.getElementById("resultado").value = nror1 - nror2;
+    };
+    document.getElementById("multiplicacion").onclick = function(){
+        document.getElementById("resultado").value = nror1 * nror2;
+    };
+    document.getElementById("division").onclick = function(){
+        document.getElementById("resultado").value = nror1 / nror2;
+    };
+</script>
+</body>
+</html>
